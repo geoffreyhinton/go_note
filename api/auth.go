@@ -21,7 +21,7 @@ func handleUserSignUp(w http.ResponseWriter, r *http.Request) {
 		error.ErrorHandler(w, "REQUEST_BODY_ERROR")
 		return
 	}
-	user, err := store.CreateNewUser(userSignup.Username, userSignup.Password, "", "")
+	user, err := store.CreateNewUser(userSignUp.Username, userSignUp.Password, "", "")
 
 	if err != nil {
 		error.ErrorHandler(w, "")
